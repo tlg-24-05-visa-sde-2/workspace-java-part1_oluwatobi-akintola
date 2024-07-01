@@ -7,17 +7,14 @@ class TelevisionClient {
     public static void main(String[] args) {
         //create instance of tv and set properties
         Television tv1 = new Television();
-        tv1.setBrand("Sony");   //sets the brand of the television using the setter method
+        tv1.setBrand("Samsung");   //sets the brand of the television using the setter method
         tv1.getVolume();
 
         //creates second instance of tv and sets properties
-        Television tv2 = new Television();
-        tv2.getBrand();              //Gets the default value for brand
-        tv2.setVolume(30);
+        Television tv2 = new Television("Sony", 30);
 
         //creates a 3rd tv obj but doesn't set properties
-        Television tv3 = new Television();
-
+        Television tv3 = new Television("LG");
 
         //turn both of them on
         tv1.turnOn();

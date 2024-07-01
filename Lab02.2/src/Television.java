@@ -7,10 +7,25 @@ class Television {
     private String brand = "Toshiba";
     private int volume = 1;
 
+    //constructors
+
+    public Television() {
+    }
+
+    public Television(String brand){
+        setBrand(brand);
+    }
+
+    public Television(String brand, int volume) {
+        this(brand);
+        setVolume(volume);
+    }
+
     //functions or operations - methods
     public void turnOn(){
         boolean isConnected = verifyInternetConnection();
-        System.out.println("Turning on your " + brand + " tv to volume " + volume);
+        System.out.println("Turning on your " + getBrand() + " tv to volume " + getVolume()); //calls getters instead of
+                                                                                              // original fields
     }
 
     public void turnOff(){
@@ -43,6 +58,6 @@ class Television {
 
     //method to take the values in an instance of television and return a string using said values
     public String toString(){
-        return "Your " + brand + " tv's volume is " + volume;
+        return "Your " + getBrand() + " tv's volume is " + getVolume();
     }
 }
