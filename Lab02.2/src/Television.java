@@ -4,15 +4,45 @@
  */
 class Television {
     //properties or attributes - fields/instance variables
-    String brand = "Toshiba";
-    int volume = 1;
+    private String brand = "Toshiba";
+    private int volume = 1;
 
     //functions or operations - methods
-    void turnOn(){
+    public void turnOn(){
+        boolean isConnected = verifyInternetConnection();
         System.out.println("Turning on your " + brand + " tv to volume " + volume);
     }
 
-    void turnOff(){
+    public void turnOff(){
         System.out.println("Shutting down...goodbye");
+    }
+
+    //Getter for brand
+    public String getBrand() {
+        return brand;
+    }
+
+    //Setter for brand
+    public void setBrand(String brand) {
+        this.brand = brand; //"this" refers to whatever is passed into the () of the setBrand() method
+    }
+
+    //Getter for volume
+    public int getVolume() {
+        return volume;
+    }
+
+    //Setter for volume
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    private boolean verifyInternetConnection(){
+        return true; //placeholder
+    }
+
+    //method to take the values in an instance of television and return a string using said values
+    public String toString(){
+        return "Your " + brand + " tv's volume is " + volume;
     }
 }
