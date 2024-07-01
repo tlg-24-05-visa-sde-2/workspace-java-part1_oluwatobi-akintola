@@ -1,30 +1,66 @@
 class TurnTables {
     //properties/attributes (limit to 5-6)
-    //fill below then uncomment
 
+     private String song = "Happy Birthday";
+     private int bpm = 75;
      String load;
-     int bpm = 75;
      String play;
      String pause;
      String mixer;
-     String song = "Happy Birthday";
+
+     //Constructors
+    public TurnTables() {
+    }
+
+    public TurnTables(String song) {
+        setSong(song);
+    }
+
+    public TurnTables(String song, int bpm) {
+        this(song);
+        setBpm(bpm);
+    }
 
     //functions or behaviors - methods
     //fill below then uncomment (at least 3)
 
-    void play(){
-        System.out.println("Playing " + song + " on " + mixer + " mixer at " + bpm + " BPM");
+    public void play(){
+        System.out.println("Playing " + getSong() + " on " + mixer + " mixer at " + getBpm() + " BPM");
     }
 
-    void pause(){
-        System.out.println("Pausing " + song + " on " + mixer + " mixer");
+    public void pause(){
+        System.out.println("Pausing " + getSong() + " on " + mixer + " mixer");
     }
 
-    void bpm(){
-        System.out.println(mixer + " mixer has been changed to " + bpm + " BPM");
+    public void bpm(){
+        System.out.println(mixer + " mixer has been changed to " + getBpm() + " BPM");
     }
 
-    void load(){
-        System.out.println("Loading " + song + " on " + mixer + " mixer");
+    public void load(){
+        System.out.println("Loading " + getSong() + " on " + mixer + " mixer");
+    }
+
+    //Getter for song
+    public String getSong() {
+        return song;
+    }
+
+    //Setter for song
+    public void setSong(String song) {
+        this.song = song;
+    }
+
+    //Getter for bpm
+    public int getBpm() {
+        return bpm;
+    }
+
+    //Setter for bpm
+    public void setBpm(int bpm) {
+        this.bpm = bpm;
+    }
+
+    public String toString(){
+        return "Playing " + getSong() + " on " + mixer + " mixer at " + getBpm() + " BPM";
     }
 }
