@@ -40,14 +40,29 @@ class Calculator {
      * randomNum()
      */
 
+    int randInt(int min, int max) {
+        return(int)
+                (Math.random() * (max - min + 1)) + min; //0.000 to 11.999, then add 5 (5.000 - 4.999)
+                                                         //downcasting decimal (int) results in 1 - 12
+    }
+
+
+    //Returns a random integer between 1 and max (inclusive)
+
+    int randomInt(int max){
+        return randInt(1, max); //delegate to min-max version passing 1 and max
+    }
+
+
     int randInt() {
-        int result = 0;
-
-        double rand = Math.random();        //0.0000 to 0.9999
-        double scaled = (rand * 11) + 1;    //1.0000 to 11.9999
-        result = (int) scaled;              //explicit downcast from double to int
-
-        return result;
+          return randInt(1, 11);              //uses another method (method within a method)
+//        int result = 0;
+//
+//        double rand = Math.random();        //0.0000 to 0.9999
+//        double scaled = (rand * 11) + 1;    //1.0000 to 11.9999
+//        result = (int) scaled;              //explicit downcast from double to int (takes a double: ex. 4.678 and makes it an int instead)
+//
+//        return result;
     }
 }
 
