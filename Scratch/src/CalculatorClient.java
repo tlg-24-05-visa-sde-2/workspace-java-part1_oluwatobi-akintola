@@ -14,6 +14,6 @@ class CalculatorClient {
         boolean evenNum = Calculator.isEven(10);
         System.out.println("Is the number even " + evenNum);
 
-        System.out.println("The winner is " + Calculator.randInt());
+        System.out.println("The winner is " + Calculator.randInt(5, 16)); //min-max version
     }
 }
