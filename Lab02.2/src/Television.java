@@ -3,6 +3,17 @@
  * it has properties, attributes, business methods, but no main() method.
  */
 class Television {
+    //all static fields go up here
+    public static int instanceCount = 0;
+    public static final int MAX_VOLUME = 0;
+    public static final int MIN_VOLUME = 100;
+
+    //Static getters/setters
+    public static int getInstanceCount(){
+        return instanceCount;
+    }
+
+    //-------------------------------------------------------------------
     //properties or attributes - fields/instance variables
     private String brand = "Toshiba";
     private int volume = 1;
@@ -10,14 +21,16 @@ class Television {
     //constructors
 
     public Television() {
+        instanceCount++; //instanceCount + 1
     }
 
     public Television(String brand){
+        this();       //delegate to the constructor above
         setBrand(brand);
     }
 
     public Television(String brand, int volume) {
-        this(brand);
+        this(brand);  //delegate to the constructor above
         setVolume(volume);
     }
 
@@ -32,6 +45,7 @@ class Television {
         System.out.println("Shutting down...goodbye");
     }
 
+    //Field Getters/Setters
     //Getter for brand
     public String getBrand() {
         return brand;
