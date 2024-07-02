@@ -2,7 +2,7 @@
 class TurnTableClient {
     public static void main(String[] args) {
         TurnTable t1 = new TurnTable("Tints - Anderson Paak (feat. Kendrick Lamar)", 100);
-        t1.mixer = "Left";
+        t1.mixer = "left";
         t1.load();
         t1.play();
 

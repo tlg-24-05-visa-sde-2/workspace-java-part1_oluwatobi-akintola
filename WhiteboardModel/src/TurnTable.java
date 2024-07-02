@@ -1,12 +1,15 @@
 class TurnTable {
+    //Static fields - properties/attributes
+    public static int MAX_BPM = 150;
+    public static int MIN_BPM = 70;
+    //----------------------------------------------
     //properties/attributes (limit to 5-6)
-
      private String song = "Happy Birthday";
      private int bpm = 75;
      String load;
      String play;
      String pause;
-     String mixer;
+     String mixer = "right";
 
      //Constructors
     public TurnTable() {
@@ -23,6 +26,10 @@ class TurnTable {
 
     //functions or behaviors - methods
     //fill below then uncomment (at least 3)
+
+    public void mixer(){
+        System.out.println(mixer + " mixer has been selected");
+    }
 
     public void play(){
         System.out.println("Playing " + getSong() + " on " + mixer + " mixer at " + getBpm() + " BPM");
@@ -55,9 +62,13 @@ class TurnTable {
         return bpm;
     }
 
-    //Setter for bpm
+    //Setter for bpm that validates min and max bpm's
     public void setBpm(int bpm) {
-        this.bpm = bpm;
+        if(bpm < MIN_BPM || bpm > MAX_BPM){
+            System.out.println(bpm + " is not a valid bpm, must be between " + MIN_BPM + ",and " + MAX_BPM);
+        } else {
+            this.bpm = bpm;
+        }
     }
 
     public String toString(){
