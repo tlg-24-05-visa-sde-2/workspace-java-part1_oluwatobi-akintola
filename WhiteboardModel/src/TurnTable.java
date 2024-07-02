@@ -1,4 +1,4 @@
-class TurnTables {
+class TurnTable {
     //properties/attributes (limit to 5-6)
 
      private String song = "Happy Birthday";
@@ -9,14 +9,14 @@ class TurnTables {
      String mixer;
 
      //Constructors
-    public TurnTables() {
+    public TurnTable() {
     }
 
-    public TurnTables(String song) {
+    public TurnTable(String song) {
         setSong(song);
     }
 
-    public TurnTables(String song, int bpm) {
+    public TurnTable(String song, int bpm) {
         this(song);
         setBpm(bpm);
     }
