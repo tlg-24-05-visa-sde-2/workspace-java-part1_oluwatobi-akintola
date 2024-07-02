@@ -14,8 +14,8 @@ class AlarmClockClient {
         //create a second alarm clock object and set snooze interval as well
         AlarmClock clock2 = new AlarmClock(10); //snoozeInterval
 
-        //create a 3rd alarm clock object but dont give a snoozeInterval
-        AlarmClock clock3 = new AlarmClock();
+        //create a 3rd alarm clock object want snoozeInterval to be the longest
+        AlarmClock clock3 = new AlarmClock(AlarmClock.MAX_INTERVAL); //using the static fixed max interval instance variable by calling AlarmClock.(dot)MAX_INTERVAL
 
         //make them snooze
         clock1.snooze();

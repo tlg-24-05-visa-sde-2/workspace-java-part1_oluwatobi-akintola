@@ -3,6 +3,14 @@
  * This class will not have a main() method, most such classes do not
  */
 class AlarmClock {
+    //static fields, one copy shared amongst all instances
+    //anything up here is referenced useing the class name i.e. AlarmClock.(dot)
+    //they are called "class constants"
+    //closest thing to "global variables"
+    //naming convention: ALL_CAPS_AND_UNDERSCORES
+    public static final int MIN_INTERVAL = 1;  //"shared" variables because of "static" (one copy)
+    public static final int MAX_INTERVAL = 20; //"final" means "fixed",and cannot change it
+
     //Properties or attributes - These are called "instance variables" or "fields" in java
     private int snoozeInterval = 5; //default value when client doesnt specify
 
@@ -27,11 +35,17 @@ class AlarmClock {
         return snoozeInterval;
     }
 
-    //TODO: Implement constraint - must be between 1 - 20 (inclusive)
+    //business data constraint - must be between 1 - 20 (inclusive)
     //if incoming value is "valid" (between 1 - 20), assign to the field
     //otherwise reject it with a message
     public void setSnoozeInterval(int snoozeInterval) {
-        this.snoozeInterval = snoozeInterval;
+        if (snoozeInterval >= MIN_INTERVAL && snoozeInterval <= MAX_INTERVAL) { //valid input
+            this.snoozeInterval = snoozeInterval;
+        } else {
+            System.out.println("Invalid snooze interval: " + snoozeInterval + ". Must be between " + MIN_INTERVAL
+                    + ",and " + MAX_INTERVAL + " (inclusive).");
+        }
+
     }
 
     //purpose: return a string describing this object
