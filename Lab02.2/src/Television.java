@@ -5,14 +5,13 @@
 class Television {
     //all static fields go up here
     public static int instanceCount = 0;
-    public static final int MAX_VOLUME = 0;
-    public static final int MIN_VOLUME = 100;
+    public static final int MAX_VOLUME = 100;
+    public static final int MIN_VOLUME = 1;
 
     //Static getters/setters
     public static int getInstanceCount(){
         return instanceCount;
     }
-
     //-------------------------------------------------------------------
     //properties or attributes - fields/instance variables
     private String brand = "Toshiba";
@@ -53,7 +52,11 @@ class Television {
 
     //Setter for brand
     public void setBrand(String brand) {
-        this.brand = brand; //"this" refers to whatever is passed into the () of the setBrand() method
+        if(brand.equals("Toshiba") || brand.equals("Samsung") || brand.equals("LG") || brand.equals("Sony")){
+            this.brand = brand;
+        } else {
+            System.out.println(brand + " is an invalid brand, acceptable brands are: Toshiba, Samsung, LG, and Sony (Case sensitive).");
+        }
     }
 
     //Getter for volume
@@ -63,7 +66,12 @@ class Television {
 
     //Setter for volume
     public void setVolume(int volume) {
-        this.volume = volume;
+        if(volume < MIN_VOLUME || volume > MAX_VOLUME){
+            System.out.println(volume + " is an invalid volume number, please pick a volume number between "
+                    + MIN_VOLUME + ", and " + MAX_VOLUME);
+        } else {
+            this.volume = volume;
+        }
     }
 
     private boolean verifyInternetConnection(){
