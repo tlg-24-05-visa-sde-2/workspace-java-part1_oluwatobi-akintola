@@ -17,10 +17,14 @@ class CalculatorTest {
             }
         }
 
-        if (isCorrect) {
-            System.out.println("It Works!");
-        } else {
-            System.out.println("It's Broken");
-        }
+        String msg = (isCorrect) ? "IT WORKS" : "IT BROKE";
+        System.out.println(msg);
+
+
+//        if (isCorrect) {
+//            System.out.println("It Works!");
+//        } else {
+//            System.out.println("It's Broken");
+//        }
     }
 }

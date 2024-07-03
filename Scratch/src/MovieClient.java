@@ -1,23 +1,18 @@
 class MovieClient {
     //Start of application
     public static void main(String[] args) {
-        Movie m1 = new Movie();
-        System.out.println(m1);
+        Movie m1 = new Movie("Dune");
+        m1.setReleaseYear(2021);
+        m1.setRevenue(407_000_000.0);
+        System.out.println(m1); //toString automatically called
         System.out.println();
 
-        Movie m2 = new Movie();
-        m2.setTitle("Dune");
-        m2.setReleaseYear(2021);
-        m2.setRevenue(407_000_000.0);
-        System.out.println(m2); //toString automatically called
+        Movie m2 = new Movie("Finding Nemo", 2003, 940_000_000.0, Rating.G, Genre.ANIME);
+        System.out.println(m2);
         System.out.println();
 
-        Movie m3 = new Movie("Finding Nemo", 2003, 940_000_000.0);
+        Movie m3 = new Movie("Adventures of Jay and DeShon", Genre.MYSTERY);
         System.out.println(m3);
-        System.out.println();
-
-        Movie m4 = new Movie("Adventures of Jay and DeShon");
-        System.out.println(m4);
         System.out.println();
     }
 }
