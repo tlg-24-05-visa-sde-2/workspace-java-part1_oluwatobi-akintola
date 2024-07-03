@@ -12,7 +12,7 @@ import java.time.*;
 class ConcertTimeTest {
 
     public static void main(String[] args) {
-        // listAvailableZoneIds();
+//         listAvailableZoneIds();
         // testLiveConcert();
     }
 
@@ -37,6 +37,7 @@ class ConcertTimeTest {
      * RESULT: 
      */
     public static void testLiveConcert() {
-        // TODO
+        LocalDate concertDate = LocalDate.of(2020, 6, 18);
+
     }
 }
