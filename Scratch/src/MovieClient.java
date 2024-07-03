@@ -4,6 +4,8 @@ class MovieClient {
         Movie m1 = new Movie("Dune");
         m1.setReleaseYear(2021);
         m1.setRevenue(407_000_000.0);
+        m1.setRating(Rating.PG_13);
+        m1.setGenre(Genre.SCI_FI);
         System.out.println(m1); //toString automatically called
         System.out.println();
 

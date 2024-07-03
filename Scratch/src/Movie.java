@@ -1,8 +1,8 @@
 class Movie {
     //Fields (instance variables)
     private String title;
-    private int releaseYear;
-    private double revenue;
+    private Integer releaseYear;
+    private Double revenue;
     private Rating rating = Rating.PG;
     private Genre genre;
 
@@ -18,7 +18,7 @@ class Movie {
     }
 
     //constructors - these get called when the client says "new"
-    public Movie(String title, int releaseYear, double revenue , Rating rating, Genre genre){
+    public Movie(String title, Integer releaseYear, Double revenue , Rating rating, Genre genre){
         this(title, genre); //delegate to ctor(constructor) above for title, and genre
         setReleaseYear(releaseYear);//handle the rest of them myself by delegating to respective setters
         setRevenue(revenue);
@@ -42,19 +42,19 @@ class Movie {
         this.title = title;
     }
 
-    public int getReleaseYear() {
+    public Integer getReleaseYear() {
         return releaseYear;
     }
 
-    public void setReleaseYear(int releaseYear) {
+    public void setReleaseYear(Integer releaseYear) {
         this.releaseYear = releaseYear;
     }
 
-    public double getRevenue() {
+    public Double getRevenue() {
         return revenue;
     }
 
-    public void setRevenue(double revenue) {
+    public void setRevenue(Double revenue) {
         this.revenue = revenue;
     }
 
