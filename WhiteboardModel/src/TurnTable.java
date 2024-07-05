@@ -9,7 +9,7 @@ class TurnTable {
      String load;
      String play;
      String pause;
-     String mixer = "right";
+     private Mixer mixer = Mixer.RIGHT;
 
      //Constructors
     public TurnTable() {
@@ -24,19 +24,24 @@ class TurnTable {
         setBpm(bpm);
     }
 
+    public TurnTable(String song, int bpm, Mixer mixer) {
+        this(song, bpm);
+        setMixer(mixer);
+    }
+
     //functions or behaviors - methods
     //fill below then uncomment (at least 3)
 
     public void mixer(){
-        System.out.println(mixer + " mixer has been selected");
+        System.out.println(getMixer() + " mixer has been selected");
     }
 
     public void play(){
-        System.out.println("Playing " + getSong() + " on " + mixer + " mixer at " + getBpm() + " BPM");
+        System.out.println("Playing " + getSong() + " on " + getMixer() + " mixer at " + getBpm() + " BPM");
     }
 
     public void pause(){
-        System.out.println("Pausing " + getSong() + " on " + mixer + " mixer");
+        System.out.println("Pausing " + getSong() + " on " + getMixer() + " mixer");
     }
 
     public void bpm(){
@@ -44,7 +49,7 @@ class TurnTable {
     }
 
     public void load(){
-        System.out.println("Loading " + getSong() + " on " + mixer + " mixer");
+        System.out.println("Loading " + getSong() + " on " + getMixer() + " mixer");
     }
 
     //Getter for song
@@ -71,7 +76,15 @@ class TurnTable {
         }
     }
 
+    public Mixer getMixer() {
+        return mixer;
+    }
+
+    public void setMixer(Mixer mixer) {
+        this.mixer = mixer;
+    }
+
     public String toString(){
-        return "Playing " + getSong() + " on " + mixer + " mixer at " + getBpm() + " BPM";
+        return "Playing " + getSong() + " on " + getMixer() + " mixer at " + getBpm() + " BPM";
     }
 }
