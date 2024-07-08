@@ -1,6 +1,6 @@
 package net.flix;
 
-class Movie {
+public class Movie {
     //Fields (instance variables)
     private String title;
     private Integer releaseYear;
