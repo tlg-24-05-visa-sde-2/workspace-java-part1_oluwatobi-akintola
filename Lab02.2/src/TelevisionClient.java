@@ -9,13 +9,15 @@ class TelevisionClient {
         Television tv1 = new Television();
         tv1.setBrand("Samsung");   //sets the brand of the television using the setter method
         tv1.setVolume(Television.MIN_VOLUME);
+        tv1.setDisplay(DisplayType.PLASMA);
 
         //creates second instance of tv and sets properties
-        Television tv2 = new Television("Sony", Television.MAX_VOLUME);
+        Television tv2 = new Television("Sony", Television.MAX_VOLUME, DisplayType.OLED);
 
         //creates a 3rd tv obj but doesn't set properties
         Television tv3 = new Television("LG");
         System.out.println();
+
 
         //turn both of them on
         tv1.turnOn();

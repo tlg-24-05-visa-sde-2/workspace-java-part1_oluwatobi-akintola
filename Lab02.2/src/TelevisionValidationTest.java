@@ -13,12 +13,15 @@ class TelevisionValidationTest {
         System.out.println("<------------------------------->");
 
         tv1.setVolume(0);
-        tv1.setBrand("Westinghouse");
-        System.out.println(tv1);
         System.out.println();
 
         tv1.setVolume(101);
+        System.out.println();
+
         tv1.setBrand("Roku");
-        System.out.println(tv1);
+        System.out.println("Brand: " + tv1.getBrand());
+
+        tv1.setBrand("Westinghouse");
+        System.out.println("Brand: " + tv1.getBrand());
     }
 }
