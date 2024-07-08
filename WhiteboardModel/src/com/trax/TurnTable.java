@@ -1,4 +1,6 @@
-class TurnTable {
+package com.trax;
+
+public class TurnTable {
     //Static fields - properties/attributes
     public static int MAX_BPM = 150;
     public static int MIN_BPM = 70;

@@ -1,3 +1,7 @@
+package com.trax.test;
+
+import com.trax.TurnTable;
+
 class TurnTableValidationTest {
 
     public static void main(String[] args) {

@@ -1,4 +1,8 @@
-import java.io.OutputStream;
+package com.trax.client;
+
+import com.trax.Mixer;
+import com.trax.TurnTable;
+
 import java.util.Arrays;
 
 class TurnTableClientArgs {

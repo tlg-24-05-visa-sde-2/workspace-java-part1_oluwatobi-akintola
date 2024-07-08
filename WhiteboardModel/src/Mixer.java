@@ -1,3 +1,0 @@
-enum Mixer {
-    RIGHT, LEFT
-}

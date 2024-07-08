@@ -1,3 +1,8 @@
+package com.trax.client;
+
+import com.trax.Mixer;
+import com.trax.TurnTable;
+
 //create 2 or 3 instances
 class TurnTableClient {
     public static void main(String[] args) {
