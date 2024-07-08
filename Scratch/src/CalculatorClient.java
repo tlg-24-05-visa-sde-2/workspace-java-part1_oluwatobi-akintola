@@ -15,5 +15,11 @@ class CalculatorClient {
         System.out.println("Is the number even " + evenNum);
 
         System.out.println("The winner is " + Calculator.randInt(5, 16)); //min-max version
+
+        System.out.println();
+
+        System.out.println("Average is: " + Calculator.average(3, 4, 9, 2, 3)); //convenient
+
+        System.out.println("Average of a single nu,ber is: " + Calculator.average(12));
     }
 }
