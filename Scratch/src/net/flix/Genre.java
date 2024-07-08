@@ -1,3 +1,5 @@
+package net.flix;
+
 enum Genre {
     ANIME("Anime"),                 //each of these is calling the genre() ctor below
     DRAMA("Drama"),

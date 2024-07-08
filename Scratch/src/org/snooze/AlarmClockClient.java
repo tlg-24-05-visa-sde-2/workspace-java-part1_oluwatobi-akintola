@@ -1,3 +1,5 @@
+package org.snooze;
+
 /*
  * Client-side "main-class", i.e.. The class definition with main().
  * That's the ONLY tHING IN HERE

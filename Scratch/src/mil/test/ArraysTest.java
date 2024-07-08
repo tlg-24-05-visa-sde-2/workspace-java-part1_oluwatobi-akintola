@@ -1,3 +1,5 @@
+package mil.test;
+
 import java.util.Arrays;
 
 class ArraysTest {

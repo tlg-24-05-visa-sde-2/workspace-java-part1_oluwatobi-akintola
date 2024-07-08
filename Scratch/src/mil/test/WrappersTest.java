@@ -1,3 +1,5 @@
+package mil.test;
+
 class WrappersTest {
 
     public static void main(String[] args) {

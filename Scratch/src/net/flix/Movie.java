@@ -1,3 +1,5 @@
+package net.flix;
+
 class Movie {
     //Fields (instance variables)
     private String title;
